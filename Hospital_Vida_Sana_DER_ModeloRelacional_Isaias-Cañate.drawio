@@ -1,0 +1,51 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram name="DER" id="0">
+    <mxGraphModel dx="1414" dy="759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;PACIENTE&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;PK id_paciente&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;nombres&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;apellidos&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;fecha_nacimiento&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;sexo&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;telefono&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;direccion&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="165" width="200" x="80" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="m" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;MEDICO&lt;/font&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;PK id_medico&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;nombres&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;apellidos&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;especialidad&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;telefono&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;correo&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="170" width="200" x="530" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CITA&lt;/font&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;PK id_cita&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;fecha&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;hora&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;estado&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;motivo_consulta&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;FK id_paciente&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;FK id_medico&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="170" width="200" x="360" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;DIAGNOSTICO&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PK id_diagnostico&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;descripcion&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;tratamiento&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;observaciones&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 15px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;FK id_cita (UNIQUE)&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="160" width="210" x="200" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="p" target="c" value="1:N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="m" target="c" value="1:N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="c" target="d" value="1:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="ModeloRelacional" id="1">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t1" value="PACIENTE&#xa;id_paciente INT PK&#xa;nombres VARCHAR(50)&#xa;apellidos VARCHAR(50)&#xa;fecha_nacimiento DATE&#xa;sexo CHAR(1)&#xa;telefono VARCHAR(15)&#xa;direccion VARCHAR(100)" style="shape=table;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="220" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="MEDICO&#xa;id_medico INT PK&#xa;nombres VARCHAR(50)&#xa;apellidos VARCHAR(50)&#xa;especialidad VARCHAR(60)&#xa;telefono VARCHAR(15)&#xa;correo VARCHAR(100)" style="shape=table;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" value="CITA&#xa;id_cita INT PK&#xa;fecha DATE&#xa;hora TIME&#xa;estado VARCHAR(20)&#xa;motivo_consulta VARCHAR(200)&#xa;id_paciente INT FK&#xa;id_medico INT FK" style="shape=table;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="260" width="240" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" value="DIAGNOSTICO&#xa;id_diagnostico INT PK&#xa;descripcion TEXT&#xa;tratamiento TEXT&#xa;observaciones TEXT&#xa;id_cita INT FK UNIQUE" style="shape=table;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="500" width="240" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
